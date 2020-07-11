@@ -1,0 +1,421 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Global Earth Day/Night Images &mdash; GMT 6.1.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Global Earth Mask Grids" href="earth-masks.html" />
+    <link rel="prev" title="Global Earth Relief Grids" href="earth-relief.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GMT
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../gallery.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations.html">Animations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook.html">Cookbook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gshhg.html">The Global Self-consistent, Hierarchical, High-resolution Geography Database (GSHHG)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dcw.html">The Digital Chart of the World Data (DCW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="earth-relief.html">Global Earth Relief Grids</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Global Earth Day/Night Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#technical-information">Technical Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-and-cache-updates">Data and Cache Updates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-references">Data References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="earth-masks.html">Global Earth Mask Grids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="earth-age.html">Global Earth Seafloor Crustal Age Grids</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users-contrib-scripts.html">Users Script Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users-contrib-symbols.html">Users Symbol Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated-defaults.html">Deprecated GMT Defaults Names</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../switching.html">Switching between different versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migrating.html">Migrating from an earlier version</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Classic Mode</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../std-opts-classic.html">Common Options (Classic Mode)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules-classic.html">Modules (Classic Mode)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/GenericMappingTools/gmt/blob/master/CONTRIBUTING.md">Contributing Guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/GenericMappingTools/gmt/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst-cheatsheet.html">reStructuredText Cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../debug.html">Debugging GMT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">GMT C API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../postscriptlight.html">PostScriptLight C API</a></li>
+</ul>
+
+            
+          
+
+    
+        <p class="caption">
+            <span class="caption-text">Getting help</span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://www.generic-mapping-tools.org/"><i class="fa fa-home fa-fw"></i> GMT Homepage</a></li>
+            
+                <li class="toctree-l1"><a href="https://forum.generic-mapping-tools.org/"><i class="fa fa-comment fa-fw"></i> GMT Community Forum</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/GenericMappingTools/gmt/blob/master/LICENSE.TXT"><i class="fa fa-book fa-fw"></i> License</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/GenericMappingTools/gmt"><i class="fa fa-github fa-fw"></i> Source Code</a></li>
+            
+        </ul>
+    
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GMT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../datasets.html">Datasets</a> &raquo;</li>
+        
+      <li>Global Earth Day/Night Images</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/GenericMappingTools/gmt/edit/6.1/doc/rst/source/datasets/earth-daynight.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="global-earth-day-night-images">
+<h1>Global Earth Day/Night Images<a class="headerlink" href="#global-earth-day-night-images" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/daynight.jpg"><img alt="../_images/daynight.jpg" src="../_images/daynight.jpg" style="width: 709.6px; height: 355.20000000000005px;" /></a>
+</div>
+<p>We serve two NASA image products: The Blue and Black marble mosaics.
+We have filtered and downsampled those as well at the same resolutions that are
+available for the Earth DEMs.  However, all images are pixel-registered only.
+These images may be plotted with <a class="reference internal" href="../grdimage.html"><span class="doc">grdimage</span></a> or <a class="reference internal" href="../grdview.html"><span class="doc">grdview</span></a> and manipulated
+by <a class="reference internal" href="../grdmix.html"><span class="doc">grdmix</span></a>.  The above example mixes both images according to a day-night
+mask and adds illumination from a corresponding Earth DEM.</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>We have processed and reformatted this publicly available global imagery
+and standardized their file names.  In GMT, you may access a global daytime image
+by specifying the special names</p>
+<blockquote>
+<div>&#64;earth_day_<em>rr</em><em>u</em></div></blockquote>
+<p>Similarly for the nighttime view:</p>
+<blockquote>
+<div>&#64;earth_night_<em>rr</em><em>u</em></div></blockquote>
+<p>Here, <em>rr</em> is a 2-digit integer specifying the image resolution in the unit <em>u</em>, where
+<em>u</em> is either <strong>d</strong>, <strong>m</strong> or <strong>s</strong> for arc degree, arc minute or arc second, respectively.
+Note there is no file extension specified.
+The following codes for <em>rr</em><em>u</em> are supported:</p>
+<table border="1" class="docutils" id="tbl-earth-relief">
+<colgroup>
+<col width="5%" />
+<col width="19%" />
+<col width="8%" />
+<col width="68%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code</th>
+<th class="head">Dimensions</th>
+<th class="head">Size</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>01d</td>
+<td>360 x    180</td>
+<td>128 KB</td>
+<td>1 arc degree image view (Blue|Black Marble mosaic &#64; 111 km)</td>
+</tr>
+<tr class="row-odd"><td>30m</td>
+<td>720 x    360</td>
+<td>435 KB</td>
+<td>30 arc minute image view (Blue|Black Marble mosaic &#64; 55 km)</td>
+</tr>
+<tr class="row-even"><td>20m</td>
+<td>1080 x    540</td>
+<td>918 KB</td>
+<td>20 arc minute image view (Blue|Black Marble mosaic &#64; 37 km)</td>
+</tr>
+<tr class="row-odd"><td>15m</td>
+<td>1440 x    720</td>
+<td>1.6 MB</td>
+<td>15 arc minute image view (Blue|Black Marble mosaic &#64; 28 km)</td>
+</tr>
+<tr class="row-even"><td>10m</td>
+<td>2160 x   1080</td>
+<td>3.4 MB</td>
+<td>10 arc minute image view (Blue|Black Marble mosaic &#64; 18 km)</td>
+</tr>
+<tr class="row-odd"><td>06m</td>
+<td>3600 x   1800</td>
+<td>8.8 MB</td>
+<td>6 arc minute image view (Blue|Black Marble mosaic &#64; 10 km)</td>
+</tr>
+<tr class="row-even"><td>05m</td>
+<td>4320 x   2160</td>
+<td>13 MB</td>
+<td>5 arc minute image view (Blue|Black Marble mosaic &#64; 9 km)</td>
+</tr>
+<tr class="row-odd"><td>04m</td>
+<td>5400 x   2700</td>
+<td>19 MB</td>
+<td>4 arc minute image view (Blue|Black Marble mosaic &#64; 7.5 km)</td>
+</tr>
+<tr class="row-even"><td>03m</td>
+<td>7200 x   3600</td>
+<td>33 MB</td>
+<td>3 arc minute image view (Blue|Black Marble mosaic &#64; 5.6 km)</td>
+</tr>
+<tr class="row-odd"><td>02m</td>
+<td>10800 x   5400</td>
+<td>71 MB</td>
+<td>2 arc minute image view (Blue|Black Marble mosaic &#64; 3.7 km)</td>
+</tr>
+<tr class="row-even"><td>01m</td>
+<td>21600 x  10800</td>
+<td>258 MB</td>
+<td>1 arc minute image view (Blue|Black Marble mosaic &#64; 1.9 km)</td>
+</tr>
+<tr class="row-odd"><td>30s</td>
+<td>43200 x  21600</td>
+<td>935 MB</td>
+<td>30 arc second image view (Blue|Black Marble mosaic original)</td>
+</tr>
+</tbody>
+</table>
+<p>All of these images will, when downloaded, be placed in your ~/.gmt/server director under
+the <code class="docutils literal notranslate"><span class="pre">earth/earth_day</span></code> and <code class="docutils literal notranslate"><span class="pre">earth/earth_night</span></code> sub-directories.</p>
+</div>
+<div class="section" id="technical-information">
+<h2>Technical Information<a class="headerlink" href="#technical-information" title="Permalink to this headline">¶</a></h2>
+<p>The 01m and lower resolution images are derivatives of NASA’s Blue and Black marble image mosaics.
+We have downsampled them via Cartesian Gaussian filtering to prevent aliasing while preserving
+the latitude-dependent resolution in the original images. The full (6 sigma) filter-widths are
+indicated in parenthesis.
+The dimensions above reflect the number of nodes covered by the global images and the sizes refer
+to the geotiff files on the remote server. <strong>Note</strong>: This data set is experimental and the
+format and delivery is likely to change in the future (e.g., via image tiles).  To make the
+files as small as possible we have also downgraded them from 24-bit to 8-bit indexed images.</p>
+</div>
+<div class="section" id="data-and-cache-updates">
+<h2>Data and Cache Updates<a class="headerlink" href="#data-and-cache-updates" title="Permalink to this headline">¶</a></h2>
+<p>Remote datasets and remote cache files are updated from time to time as it is our aim to provide
+only the very latest version of the data.  This means we (a) do not support multiple versions of
+a dataset (you must obtain earlier versions of any published data sets elsewhere), (b) as GMT
+detects a new version on the server it will download it the next time you access the remote data
+set and it will overwrite any previous version, and (c) any data set or file we deem obsolete will
+be removed from the server, and hence it will also be removed from your .gmt server and cache
+folders when the syncing occurs.  This is particularly true of the cache files that may come and go.
+If there are any cache files there that are important to you then we recommend you place a copy
+of them in another folder. Syncing occurs at most once a day and only when you actively use GMT.</p>
+</div>
+<div class="section" id="data-references">
+<h2>Data References<a class="headerlink" href="#data-references" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Blue Marble [<a class="reference external" href="https://visibleearth.nasa.gov/images/57752/blue-marble-land-surface-shallow-water-and-shaded-topography">https://visibleearth.nasa.gov/images/57752/blue-marble-land-surface-shallow-water-and-shaded-topography</a>].</li>
+<li>Black Marble: [<a class="reference external" href="https://earthobservatory.nasa.gov/features/NightLights/page3.php">https://earthobservatory.nasa.gov/features/NightLights/page3.php</a>].</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="earth-masks.html" class="btn btn-neutral float-right" title="Global Earth Mask Grids" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="earth-relief.html" class="btn btn-neutral float-left" title="Global Earth Relief Grids" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, The GMT Team.
+      <span class="lastupdated">
+        Last updated on Jul 10, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,0 +1,415 @@
+
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Global Earth Seafloor Crustal Age Grids &mdash; GMT 6.1.1 documentation</title>
+  
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.png"/>
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+        <script type="text/javascript" src="../_static/language_data.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/style.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Users Script Contributions" href="../users-contrib-scripts.html" />
+    <link rel="prev" title="Global Earth Mask Grids" href="earth-masks.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home" alt="Documentation Home"> GMT
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                6.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+    
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Getting started</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../gallery.html">Example Gallery</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../animations.html">Animations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../tutorial.html">Tutorial</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Reference documentation</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">Modules</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cookbook.html">Cookbook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../datasets.html">Datasets</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="gshhg.html">The Global Self-consistent, Hierarchical, High-resolution Geography Database (GSHHG)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dcw.html">The Digital Chart of the World Data (DCW)</a></li>
+<li class="toctree-l2"><a class="reference internal" href="earth-relief.html">Global Earth Relief Grids</a></li>
+<li class="toctree-l2"><a class="reference internal" href="earth-daynight.html">Global Earth Day/Night Images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="earth-masks.html">Global Earth Mask Grids</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Global Earth Seafloor Crustal Age Grids</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#usage">Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#technical-information">Technical Information</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-references">Data References</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../users-contrib-scripts.html">Users Script Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../users-contrib-symbols.html">Users Symbol Contributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../changes.html">Changelog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../deprecated-defaults.html">Deprecated GMT Defaults Names</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../switching.html">Switching between different versions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../migrating.html">Migrating from an earlier version</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Classic Mode</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../std-opts-classic.html">Common Options (Classic Mode)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules-classic.html">Modules (Classic Mode)</a></li>
+</ul>
+<p class="caption"><span class="caption-text">Developer Resources</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/GenericMappingTools/gmt/blob/master/CONTRIBUTING.md">Contributing Guide</a></li>
+<li class="toctree-l1"><a class="reference external" href="https://github.com/GenericMappingTools/gmt/blob/master/CODE_OF_CONDUCT.md">Code of Conduct</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../rst-cheatsheet.html">reStructuredText Cheatsheet</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../debug.html">Debugging GMT</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api.html">GMT C API</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../postscriptlight.html">PostScriptLight C API</a></li>
+</ul>
+
+            
+          
+
+    
+        <p class="caption">
+            <span class="caption-text">Getting help</span>
+        </p>
+        <ul>
+            
+                <li class="toctree-l1"><a href="https://www.generic-mapping-tools.org/"><i class="fa fa-home fa-fw"></i> GMT Homepage</a></li>
+            
+                <li class="toctree-l1"><a href="https://forum.generic-mapping-tools.org/"><i class="fa fa-comment fa-fw"></i> GMT Community Forum</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/GenericMappingTools/gmt/blob/master/LICENSE.TXT"><i class="fa fa-book fa-fw"></i> License</a></li>
+            
+                <li class="toctree-l1"><a href="https://github.com/GenericMappingTools/gmt"><i class="fa fa-github fa-fw"></i> Source Code</a></li>
+            
+        </ul>
+    
+
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">GMT</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="../datasets.html">Datasets</a> &raquo;</li>
+        
+      <li>Global Earth Seafloor Crustal Age Grids</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            
+              <a href="https://github.com/GenericMappingTools/gmt/edit/6.1/doc/rst/source/datasets/earth-age.rst" class="fa fa-github"> Edit on GitHub</a>
+            
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="global-earth-seafloor-crustal-age-grids">
+<h1>Global Earth Seafloor Crustal Age Grids<a class="headerlink" href="#global-earth-seafloor-crustal-age-grids" title="Permalink to this headline">¶</a></h1>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="../_images/GMT_agefig.png"><img alt="../_images/GMT_agefig.png" src="../_images/GMT_agefig.png" style="width: 710px;" /></a>
+</div>
+<p>Numerous geodynamic and geophysical studies consider both the seafloor depth and
+the seafloor crustal age. <a class="reference external" href="https://www.earthbyte.org/">EarthByte</a> has pioneered
+the creation of crustal age grids since 1997 and we offer their latest version for
+remote use in GMT.</p>
+<div class="section" id="usage">
+<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
+<p>We have processed and reformatted the EarthByte crustal age grids
+and standardized their file names.  In GMT, you may access a global crustal age grid
+(or a subset only by using the <strong>-R</strong> option) by specifying the special name</p>
+<blockquote>
+<div>&#64;earth_age_<em>rr</em><em>u</em>[_<em>reg</em>]</div></blockquote>
+<p>where <em>rr</em> is a 2-digit integer specifying the grid resolution in the unit <em>u</em>, where
+<em>u</em> is either <strong>d</strong>, <strong>m</strong> or <strong>s</strong> for arc degree, arc minute or arc second, respectively.
+Optionally, you can append _<strong>g</strong> or _<strong>p</strong> to specifically get the gridline-registered or
+pixel-registered version (if they both exist).  If <em>reg</em> is not specified we will return
+the pixel-registered version unless only the gridline-registered file is available.
+The following codes for <em>rr</em><em>u</em> and the optional <em>reg</em> are supported (dimensions are listed
+for pixel-registered grids; gridline-registered grids increment dimensions by one).
+The full (6 sigma) filter-widths used to downsample the 1 min resolution are indicated in
+parenthesis. <strong>Note</strong>: Like the Earth relief data, grids of 5 arc minute and smaller resolutions
+are tiled for faster download.</p>
+<table border="1" class="docutils" id="tbl-earth-age">
+<colgroup>
+<col width="5%" />
+<col width="21%" />
+<col width="4%" />
+<col width="9%" />
+<col width="62%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Code</th>
+<th class="head">Dimensions</th>
+<th class="head">Reg</th>
+<th class="head">Size</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>01d</td>
+<td>360 x    180</td>
+<td>g,p</td>
+<td>125 KB</td>
+<td>1 arc degree global seafloor ages (1 min &#64; 111 km)</td>
+</tr>
+<tr class="row-odd"><td>30m</td>
+<td>720 x    360</td>
+<td>g,p</td>
+<td>402 KB</td>
+<td>30 arc minute global relief (1 min &#64; 55 km)</td>
+</tr>
+<tr class="row-even"><td>20m</td>
+<td>1080 x    540</td>
+<td>g,p</td>
+<td>827 KB</td>
+<td>20 arc minute global relief (1 min &#64; 37 km)</td>
+</tr>
+<tr class="row-odd"><td>15m</td>
+<td>1440 x    720</td>
+<td>g,p</td>
+<td>1.4 MB</td>
+<td>15 arc minute global relief (1 min &#64; 28 km)</td>
+</tr>
+<tr class="row-even"><td>10m</td>
+<td>2160 x   1080</td>
+<td>g,p</td>
+<td>2.9 MB</td>
+<td>10 arc minute global relief (1 min &#64; 18 km)</td>
+</tr>
+<tr class="row-odd"><td>06m</td>
+<td>3600 x   1800</td>
+<td>g,p</td>
+<td>7.3 MB</td>
+<td>6 arc minute global relief (1 min &#64; 10 km)</td>
+</tr>
+<tr class="row-even"><td>05m</td>
+<td>4320 x   2160</td>
+<td>g,p</td>
+<td>10 MB</td>
+<td>5 arc minute global relief (1 min &#64; 9 km)</td>
+</tr>
+<tr class="row-odd"><td>04m</td>
+<td>5400 x   2700</td>
+<td>g,p</td>
+<td>15 MB</td>
+<td>4 arc minute global relief (1 min &#64; 7.5 km)</td>
+</tr>
+<tr class="row-even"><td>03m</td>
+<td>7200 x   3600</td>
+<td>g,p</td>
+<td>26 MB</td>
+<td>3 arc minute global relief (1 min &#64; 5.6 km)</td>
+</tr>
+<tr class="row-odd"><td>02m</td>
+<td>10800 x   5400</td>
+<td>g,p</td>
+<td>56 MB</td>
+<td>2 arc minute global relief (1 min &#64; 3.7 km)</td>
+</tr>
+<tr class="row-even"><td>01m</td>
+<td>21600 x  10800</td>
+<td>g,p</td>
+<td>188 MB</td>
+<td>1 arc minute global relief (1 min original)</td>
+</tr>
+</tbody>
+</table>
+<p>All of these data will, when downloaded, be placed in your ~/.gmt/server directory, with
+the earth_age files being placed in an <code class="docutils literal notranslate"><span class="pre">earth/earth_age</span></code> sub-directory. If you do not
+specify a CPT, the default CPT for this data set will be used (<em>&#64;age_chrons_GTS2012_2020.cpt</em>)</p>
+</div>
+<div class="section" id="technical-information">
+<h2>Technical Information<a class="headerlink" href="#technical-information" title="Permalink to this headline">¶</a></h2>
+<p>We scale and reformat the original data to take up very little space so that downloads
+from the servers are as fast as possible.  For the seafloor crustal age grid this means
+we chose 0.01 My as the smallest data unit, which is well below the uncertainties in the
+model.  Data are scaled and shifted to fit in a short integer grid that is highly compressed
+by netCDF lossless compression and chunking.  The data are reported in Myr relative
+to the 2012 Geological Time Scale.</p>
+</div>
+<div class="section" id="data-references">
+<h2>Data References<a class="headerlink" href="#data-references" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li>Seton et al. [2020, in review] [<a class="reference external" href="https://www.earthbyte.org/category/resources/data-models/seafloor-age/">https://www.earthbyte.org/category/resources/data-models/seafloor-age/</a>].</li>
+</ol>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../users-contrib-scripts.html" class="btn btn-neutral float-right" title="Users Script Contributions" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="earth-masks.html" class="btn btn-neutral float-left" title="Global Earth Mask Grids" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, The GMT Team.
+      <span class="lastupdated">
+        Last updated on Jul 10, 2020.
+      </span>
+
+    </p>
+  </div>
+    
+    
+      Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(false);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
